@@ -1,0 +1,114 @@
+.chatpage__main {
+  width: 100%;
+  height: 100vh;
+  flex: 0.77;
+  flex-direction: column;
+}
+
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  height: 6.3%;
+  background-color: #37474f;
+  color: #ffffff;
+  border-bottom: 2px solid black;
+  border-left: 1px solid gray;
+}
+
+.chat__messages {
+  height: 83.7vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chat__input {
+  margin-bottom: 0;
+  background-color: #37474f;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+}
+
+.message {
+  background-color: #37474f;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid gray;
+}
+
+form {
+  display: flex;
+}
+
+label {
+  width: 90%;
+}
+
+.message input {
+  width: 90%;
+  height: 60%;
+  outline: none;
+  font-size: 1.1rem;
+  padding: 0.1rem;
+  outline: 2px solid gray;
+}
+
+.sendbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendbtn button {
+  width: 6rem;
+  border-radius: 2rem;
+  outline: none;
+  box-shadow: none;
+}
+
+.chat__byme {
+  background-color: red;
+  /* width: 40%; */
+  border-radius: 2rem;
+  padding: 0.5rem 1.3rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.4rem 0.3rem;
+  margin-left: 38rem;
+}
+
+.chat__byme h4 {
+  width: 100%;
+}
+
+.chat__byuser {
+  background-color: blue;
+  width: 40%;
+  border-radius: 2rem;
+  padding: 0.5rem 1.3rem;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.4rem 0.3rem;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.imageMsg {
+  width: 400;
+  height: 400;
+  background: url("./Image/test.jpg");
+  float: right;
+}

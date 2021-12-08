@@ -1,38 +1,389 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homepage {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+    list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+    overflow-x: hidden;
+    /* overflow: hidden; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+    width: 100vw;
+    height: 15vh;
+    /* background: linear-gradient(#0F2027, #203A43, #2c5364); */
+    /* background: linear-gradient(); */
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo {
+    font-size: 1.8rem;
+    margin: 0.9rem;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.NavLinks {
+    margin: 0.9rem;
+}
+
+.NavLinks ul {
+    display: flex;
+}
+
+.NavLinks ul li:hover {
+    background-color: teal;
+}
+
+.NavLinks li a {
+    padding: 1rem;
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.2rem;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.toggleBtn .bar {
+    width: 30px;
+    height: 0.2rem;
+    background-color: white;
+    margin: 3px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width:676px) {
+    .toggleBtn {
+        display: flex;
+    }
+    .NavLinks {
+        display: none;
+        width: 100%;
+        height: 32vh;
+        margin: 0rem;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .NavLinks ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .NavLinks li {
+        text-align: center;
+    }
+    .NavLinks {
+        /* background-color: #2c3e50; */
+        background-color: #000000;
+    }
+    .NavLinks a {
+        padding: 0.5rem 1rem;
+    }
+    .NavLinks.active {
+        display: flex;
+    }
+    .logo {
+        padding-top: 1.5rem;
+    }
+    .centerDiv.active {
+        padding-top: 100px;
+    }
+    .projectscardsDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flip-card {
+        margin: 1rem;
+    }
+}
+
+.headerText {
+    margin: auto 0;
+}
+
+.centerDiv {
+    /* border: 1px solid white; */
+    /* align-items: center; */
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.centerDiv h1,
+h3,
+button {
+    padding: 0.6rem;
+}
+
+.centerDiv h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    /* margin-top: 10rem; */
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.centerDiv h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.centerDiv button {
+    padding: 0.6rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    outline-color: none;
+    outline: none;
+    font-size: 1.3rem;
+    background: linear-gradient(#141E30, #243B55);
+    color: #fff;
+}
+
+.centerDiv button:hover {
+    background: linear-gradient(#304352, #d7d2cc);
+    color: white;
+}
+
+.centerDiv button:active {
+    outline: none;
+}
+
+
+/* body {
+background-image: url('http://3.bp.blogspot.com/-zXIRSl5bt_I/Vd3tRCGiHDI/AAAAAAAASXk/TODnBRnlg_w/s1600/wallpaper-hd-desktop-technology-backgrounds-important-wallpapers.jpg');
+background-repeat: no-repeat;
+} */
+
+
+/* Setting image on header/*
+
+
+
+.lowerBody {
+background: url('bgImg\ portfolio.jpg');
+} */
+
+
+/* saving color bg color 2c3e50 */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(40, 48, 72, 0.7), rgba(40, 48, 72, 0.8)), url('http://3.bp.blogspot.com/-zXIRSl5bt_I/Vd3tRCGiHDI/AAAAAAAASXk/TODnBRnlg_w/s1600/wallpaper-hd-desktop-technology-backgrounds-important-wallpapers.jpg');
+    background-repeat: no-repeat;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 81%, 70% 100%, 30% 100%, 0 82%, 0 0);
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absoulute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: 0.3;
+    background: linear-gradient(to right, #16222A 0%, #3A6073 0%, #536976 100%);
+}
+
+
+/* *********** About start ************** */
+
+.about {
+    width: 100vw;
+    height: auto;
+    /* border: 1px solid black; */
+}
+
+.about h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 300;
+    color: ;
+    text-transform: uppercase;
+}
+
+.moving {
+    display: block;
+    width: 20rem;
+    height: 0.5rem;
+    border-radius: 5rem;
+    background: linear-gradient(#141E30, #243B55);
+}
+
+.about p {
+    text-align: center;
+}
+
+.aboutpara {
+    padding: 10px 26px;
+    margin: 10px 0;
+}
+
+
+/* *************************** about Ends ****************************** */
+
+
+/* ********************* projects start *********************** */
+
+.projects h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 300;
+    color: ;
+    text-transform: uppercase;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 310px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    /* padding: 1rem; */
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.flip-card-back {
+    background-color: #304352;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    padding: 0.3rem 0rem;
+    align-items: center;
+}
+
+.cardsBtn {
+    padding: 0.3rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 30;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.projectscardsDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.seemoreDiv {
+    margin: 20px 0;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+
+.SeeMoreBtn {
+    padding: 0.6rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    outline-color: none;
+    outline: none;
+    font-size: 1.3rem;
+    background: linear-gradient(#141E30, #243B55);
+    color: #fff;
+}
+
+.SeeMoreBtn:hover {
+    background: linear-gradient(#304352, #d7d2cc);
+    color: white;
+}
+
+
+/* ******************* projects ends ************** */
+
+
+/* ***************** Contact Starts ****************** */
+
+.contact h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 300;
+    color: ;
+    text-transform: uppercase;
+}
+
+
+/* ******************** Footer Starts **************** */
+
+.footer {
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+}
+
+.footer p {
+    padding-top: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* ******************** Footer Ends **************** */
